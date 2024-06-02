@@ -17,9 +17,13 @@ const BitcoinPrice = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h1>Bitcoin Price</h1>
-      <p>{price ? `$${price}` : "Loading..."}</p>
+    <div className="text-center mb-8 p-6 bg-white rounded-lg shadow-md">
+      <h1 className="text-3xl font-bold mb-4 text-black">
+        Current Bitcoin Price
+      </h1>
+      <p className="text-2xl text-black">
+        {price ? `$${price}` : "Loading..."}
+      </p>
     </div>
   );
 };

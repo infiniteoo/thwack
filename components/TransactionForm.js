@@ -21,36 +21,47 @@ const TransactionForm = () => {
   };
 
   return (
-    <div>
-      <h2>Create Bitcoin Transaction</h2>
+    <div className="text-center mb-8 p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-3xl font-bold mb-4 text-black">
+        Create Bitcoin Transaction
+      </h2>
       <input
+        className="block w-full mb-4 p-2 border border-gray-300 rounded"
         type="text"
         name="sender"
         placeholder="Sender Address"
         onChange={handleChange}
       />
       <input
+        className="block w-full mb-4 p-2 border border-gray-300 rounded"
         type="text"
         name="recipient"
         placeholder="Recipient Address"
         onChange={handleChange}
       />
       <input
+        className="block w-full mb-4 p-2 border border-gray-300 rounded"
         type="number"
         name="amount"
         placeholder="Amount (satoshis)"
         onChange={handleChange}
       />
       <input
+        className="block w-full mb-4 p-2 border border-gray-300 rounded"
         type="text"
         name="privateKey"
         placeholder="Private Key"
         onChange={handleChange}
       />
-      <button onClick={createTransaction}>Create Transaction</button>
+      <button
+        onClick={createTransaction}
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Create Transaction
+      </button>
       {txHex && (
-        <div>
-          <p>Transaction Hex: {txHex}</p>
+        <div className="mt-4">
+          <p className="text-black">Transaction Hex: {txHex}</p>
         </div>
       )}
     </div>
