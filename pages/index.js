@@ -1,5 +1,7 @@
 import Head from "next/head";
 import BitcoinPrice from "../components/BitcoinPrice";
+import WalletGenerator from "../components/WalletGenerator";
+import TransactionForm from "../components/TransactionForm";
 
 export default function Home() {
   return (
@@ -15,6 +17,8 @@ export default function Home() {
 
       <main>
         <BitcoinPrice />
+        <WalletGenerator />
+        <TransactionForm />
       </main>
     </div>
   );
